@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Facebook</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<div class="wrapper">
+<div class="head">
+  	 <div class="col-sm-4"><h1>Aimfill Login</h1></div>
+  <div class="col-sm-4">Username<%= form_for :facebook do |f| %>
+       	<%= f.text_field :text, mail: "from@example.com" %>
+      </div>
+   <div class="col-sm-4">Password<br><%= f.password_field :password %></div><%= link_to "Forgot password?" %>
+     
+  </div>
+  
+  <div class=container>
+  <div class="line">
+    <div class="col-md-3">Welcome, Students</div>
+    <div class="col-md-5", align="center"><b>Create an Free account</b><br>
+<%= f.text_field :Firstname, Placeholder: "Firstname" %><%= f.text_field :Surenmae, Placeholder: "Surename" %><br>
+ <br><%= f.text_field :mobile, placeholder: "Mobile number" %></br>
+<br>  <%= f.text_field :mobile, placeholder: "Re-enter mobile number" %></br> 
+  <br><%= f.text_field :password, placeholder: "New Password" %></br>
+<br>  Birthday<%= f.date_select :dateinstructed, :order => [:day, :month, :year] %>
+<br> <%= f.radio_button "gender", "female"%>Female <%= f.radio_button "gender", "Male" %>Male
+      <br><%= f.submit "Create an Account" %>
+      </div>
+  </div>
+</div>
+</div>
+</div>
+
+<% end %>
+<%= yield %>
+
+</body>
+</html>

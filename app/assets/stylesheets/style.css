@@ -1,0 +1,23 @@
+.wrapper
+ {
+
+ 	width:1000px;
+ 	height: 600px;
+ 	border: thin ridge black;
+    margin: auto;
+ }
+.col-sm-4
+ {
+ text-align: center;
+line-height: 15px;
+border-bottom: thin ridge black;
+ }
+ .container
+ {
+width: 1000px; 
+}
+.col-md-5
+{
+line-height: 25px;
+background-image: url(index.jpeg);
+}
